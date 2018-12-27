@@ -1,0 +1,23 @@
+h1, h2, h3 {
+    text-align: left;
+}
+
+#maindisplay {
+    
+}
+
+.row {
+    height: 100%;
+}
+
+#character-select, #opponents-select, #character, #battle, #opponent, #win-loss, #defeated {
+    border: solid green 1px;
+    height: 100%;
+}
+
+#selector-container, #battlezone, #gameinfo {
+    height: 150px;
+    background: #cccccc;
+    border: solid black 1px;
+    margin-top: 25px;
+}
