@@ -1,5 +1,5 @@
-h1, h2, h3 {
-    text-align: left;
+h1, h2, h3, header {
+    text-align: center;
 }
 
 #maindisplay {
@@ -11,13 +11,26 @@ h1, h2, h3 {
 }
 
 #character-select, #opponents-select, #character, #battle, #opponent, #win-loss, #defeated {
-    border: solid green 1px;
+    border: solid black 1px;
+    background: #cccccc;
+    height: 100%;
+    text-align: center;
+}
+#hero-damage, #enemy-damage, #hero-health, #enemy-health, #fight-button {
+    border: solid black 1px;
+    height: 33.33%;
+}
+
+#fight-button {
+    margin-left: 25%;
+}
+
+#fight-btn {
+    width: 100%;
     height: 100%;
 }
 
 #selector-container, #battlezone, #gameinfo {
     height: 150px;
-    background: #cccccc;
-    border: solid black 1px;
     margin-top: 25px;
 }
