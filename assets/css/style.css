@@ -1,22 +1,47 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chars {
+    height: 150px;
+    width: 25%;
+    float: left;
+    border: solid 1px black;
+}
+
+.char-select {
+    height: 150px;
+    width: 100%;
+    float: left;
+    border: solid 1px black;
+}
+
+.opp-select {
+    height: 150px;
+    width: 33.33%;
+    float: left;
+    border: solid 1px black;
+}
+
 h1, h2, h3, header {
     text-align: center;
 }
 
-#maindisplay {
-    
-}
-
 .row {
     height: 100%;
+    width: 100%;
 }
 
-#character-select, #opponents-select, #character, #battle, #opponent, #win-loss, #defeated {
+#opponents-select, #battle, #opponent, #win-loss, #defeated {
     border: solid black 1px;
     background: #cccccc;
     height: 100%;
     text-align: center;
 }
-#hero-damage, #enemy-damage, #hero-health, #enemy-health, #fight-button {
+
+#hero-damage, #enemy-damage, #hero-health, #enemy-health {
     border: solid black 1px;
     height: 33.33%;
 }
