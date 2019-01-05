@@ -16,6 +16,7 @@
     width: 100%;
     float: left;
     border: solid 1px black;
+    object-fit: cover;
 }
 
 .opp-select {
@@ -23,6 +24,7 @@
     width: 33.33%;
     float: left;
     border: solid 1px black;
+    object-fit: cover;
 }
 
 .enemy-selected {
