@@ -14,7 +14,10 @@
         </header>
         <main>
             <div class="container-fluid" id="maindisplay">
-                <h2 id="selector">Choose your character!</h2>
+                    <div class="row no-gutters">
+                        <div class="col-6"><h2 id="char-selector">Choose your character!</h2></div>
+                        <div class="col-6"><h2 id="opp-selector">Choose your opponent!</h2></div> 
+                    </div>   
                 <div class="container-fluid" id="selector-container">
                     <div class="row no-gutters">
                         <div class="col-1"></div>
@@ -22,10 +25,10 @@
                             <img id="YTS" class="chars" src="assets/images/Spider.jpg">
                             <img id="WT" class="chars" src="assets/images/Turkey.jpg">
                             <img id="BT" class="chars" src="assets/images/Beaver.jpg">
-                            <img id="CC" class="chars" src="assets/images/Chipmunk.jpg">
+                            <img id="SCC" class="chars" src="assets/images/Chipmunk.jpg">
                         </div>
                         <div class="col-2"></div>
-                        <div class="col-4 clearfix" id="opponents-select">opponents-select</div>
+                        <div class="col-4 clearfix" id="opponents-select"></div>
                         <div class="col-1"></div>
                     </div>
                 </div>
@@ -37,17 +40,15 @@
                         <div class="col-1"></div>
                         <div class="col-2" id="battle">
                             <div class="row no-gutters">
-                                <div class="col-6" id="hero-damage">Hero Damage</div>
-                                <div class="col-6" id="enemy-damage">Enemy Damage</div>
                                 <div class="w-100"></div>
                                 <div class="col-6" id="fight-button"><button type="button" class="btn btn-secondary" id="fight-btn">Fight!</button></div>
                                 <div class="w-100"></div>
-                                <div class="col-6" id="hero-health">Hero Health</div>
-                                <div class="col-6" id="enemy-health">Enemy Health</div>
+                                <div class="col-6" id="hero-health">Current Health: <br></div>
+                                <div class="col-6" id="enemy-health">Enemy Health: <br></div>
                             </div>
                         </div>
                         <div class="col-1"></div>
-                        <div class="col-2" id="opponent">opponent</div>
+                        <div class="col-2" id="opponent"></div>
                         <div class="col-2"></div>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                         <div class="col-2"></div>
                         <div class="col-2" id="win-loss"></div>
                         <div class="col-3"></div>
-                        <div class="col-4" id="defeated">defeated</div>
+                        <div class="col-4" id="defeated"></div>
                     </div>
                 </div>
 

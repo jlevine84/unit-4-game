@@ -25,6 +25,12 @@
     border: solid 1px black;
 }
 
+.enemy-selected {
+    height: 100%;
+    width: 100%;
+    border: solid 1px black;
+}
+
 h1, h2, h3, header {
     text-align: center;
 }
@@ -34,7 +40,7 @@ h1, h2, h3, header {
     width: 100%;
 }
 
-#opponents-select, #battle, #opponent, #win-loss, #defeated {
+#battle, {
     border: solid black 1px;
     background: #cccccc;
     height: 100%;
