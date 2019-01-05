@@ -27,7 +27,7 @@ var currentHealth;
 var currentAttack = 0;
 var enemyHealth;
 var startingAttack;
-var opponentsRemaining = 2;
+var opponentsRemaining = 3;
 
 //Game functions
 //UI after character has been selected
@@ -37,60 +37,57 @@ hideCharacters = function() {
     $("#BT").hide();
     $("#SCC").hide();
     $("#char-selector").hide();
-    $("#opp-selector").show();
-       
+    $("#opp-selector").show();       
 } 
 
+game = function() {
+    //Enemy Selection
+    opponent1.on("click", function () {
+        enemySelected = opponent1.addClass("enemy-selected")
+        $("#opponent").append(enemySelected)
+        $("#battle").show() 
+        $("#enemy-health").text("Enemy Health: " + opponent1Health);
+        enemyHealth = opponent1Health;        
+    });
+
+    opponent2.on("click", function () {
+        enemySelected = opponent2.addClass("enemy-selected")
+        $("#opponent").append(enemySelected)
+        $("#battle").show() 
+        $("#enemy-health").text("Enemy Health: " + opponent2Health);
+        enemyHealth = opponent2Health;        
+    });
+
+    opponent3.on("click", function () {
+        enemySelected = opponent3.addClass("enemy-selected")
+        $("#opponent").append(enemySelected)
+        $("#battle").show() 
+        $("#enemy-health").text("Enemy Health: " + opponent3Health);
+        enemyHealth = opponent3Health;        
+    }); 
+}
+
+//Fight Button Function
 fight = function() {
+    //Character & Enemy Hitpoints are reduced
     currentAttack = currentAttack + startingAttack;
     currentHealth = currentHealth - 15;
     $("#hero-health").text("Current Health: " + currentHealth);
     enemyHealth = enemyHealth - currentAttack;
     $("#enemy-health").text("Enemy Health: " + enemyHealth);
 
-    //gameover condition
-    if (currentHealth <= 0){
+    //Gameover conditions
+    if (currentHealth <= 0) {
         $("#win-loss").text("You lost! Refresh the page to try a new fighter!")
     } else if (enemyHealth <= 0) {
+        $("#win-loss").text("Enemy Defeated! Select your next opponent!")
         opponentsRemaining--;
         $("#enemy-health").text("Enemy Health: ")
         enemySelected.hide();
-    } else if (opponentsRemaining === 0) {
+    } 
+    if (opponentsRemaining === 0) {
         $("#win-loss").text("You Won!")
     }
-}
-
-game = function() {
-    if (opponentsRemaining > 0) {
-        //Opponent selection
-        opponent1.on("click", function () {
-            enemySelected = opponent1.addClass("enemy-selected")
-            $("#opponent").append(enemySelected)
-            $("#battle").show() 
-            $("#enemy-health").text("Enemy Health: " + opponent1Health);
-            $("#enemy-damage").text("15");
-            enemyHealth = opponent1Health;        
-        });
-
-        opponent2.on("click", function () {
-            enemySelected = opponent2.addClass("enemy-selected")
-            $("#opponent").append(enemySelected)
-            $("#battle").show() 
-            $("#enemy-health").text("Enemy Health: " + opponent2Health);
-            $("#enemy-damage").text("15");
-            enemyHealth = opponent2Health;        
-        });
-
-        opponent3.on("click", function () {
-            enemySelected = opponent3.addClass("enemy-selected")
-            $("#opponent").append(enemySelected)
-            $("#battle").show() 
-            $("#enemy-health").text("Enemy Health: " + opponent3Health);
-            $("#enemy-damage").text("15");
-            enemyHealth = opponent3Health;        
-        });
-
-    }  
 }
 
 // On page load.
@@ -99,11 +96,11 @@ $(document).ready(function() {
     $("#battle").hide();
 
 
-    //Player selects a character and character selection is removed.
+    //Player selects a character, character selection is removed, and opponents are generated. Fight!
     $("#YTS").on("click", function () {
         //UI update
         hideCharacters();
-        //Player's is selected character and opponents are created
+        //Player's is selected character
         charset = $("<img>").attr("src", "assets/images/Spider.jpg").addClass("char-select");
         $("#character").append(charset);
         currentHealth = YTS.health;
@@ -125,7 +122,8 @@ $(document).ready(function() {
         opponent3 = $("<img>").attr("src", "assets/images/Chipmunk.jpg").addClass("opp-select");
         $("#opponents-select").append(opponent3);
         opponent3Health = SCC.health;
-
+        
+        //Enable opponent selection
         game();
  
     });
@@ -153,6 +151,7 @@ $(document).ready(function() {
         opponent3Health = SCC.health;
 
         game();
+
     });
 
     $("#BT").on("click", function () {
@@ -178,6 +177,7 @@ $(document).ready(function() {
         opponent3Health = SCC.health;
 
         game();
+
     });
 
     $("#SCC").on("click", function () {
@@ -203,11 +203,11 @@ $(document).ready(function() {
         opponent3Health = BT.health;
 
         game();
+
     });
 
     $("#fight-btn").on("click", function() {
         fight()
-        
     });
 
 });
