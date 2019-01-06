@@ -4,6 +4,68 @@
     display: table;
 }
 
+.heading {
+    width: 100%;
+}
+
+header: h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.name {
+    background: #4aaaa5;
+    border: solid #cccccc 1px;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 45px;    
+}
+
+.title {
+    text-shadow: 0px 2px;
+}
+
+.title, .nav {
+    background: #ffffff;
+    font-size: 30px;
+    line-height: 45px; 
+}
+
+a {
+    color: #666666;
+}
+
+a:visited {
+    color: #666666;
+}
+
+main {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+.top {
+    margin-top: 15px;
+}
+
+.fouroneone {
+    margin-top: 15px;
+    background: white;
+    font: black;
+    border: solid black 1px;
+    padding-top: 5px;
+}
+
+#opp-selector {
+    margin-left: 33.33%;
+}
+
+body {
+    background-image: url("../images/gravel.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .chars {
     height: 150px;
     width: 25%;
@@ -61,6 +123,7 @@ h1, h2, h3, header {
 #fight-btn {
     width: 100%;
     height: 100%;
+    background: black;
 }
 
 #selector-container, #battlezone, #gameinfo {

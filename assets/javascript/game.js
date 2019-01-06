@@ -78,14 +78,18 @@ fight = function() {
 
     //Gameover conditions
     if (currentHealth <= 0) {
+        $("#win-loss").show();
         $("#win-loss").text("You lost! Refresh the page to try a new fighter!")
     } else if (enemyHealth <= 0) {
+        $("#win-loss").show();
         $("#win-loss").text("Enemy Defeated! Select your next opponent!")
         opponentsRemaining--;
         $("#enemy-health").text("Enemy Health: ")
         enemySelected.hide();
     } 
+    
     if (opponentsRemaining === 0) {
+        $("#win-loss").show();
         $("#win-loss").text("You Won!")
     }
 }
@@ -94,6 +98,7 @@ fight = function() {
 $(document).ready(function() {
     $("#opp-selector").hide();
     $("#battle").hide();
+    $("#win-loss").hide();
 
 
     //Player selects a character, character selection is removed, and opponents are generated. Fight!

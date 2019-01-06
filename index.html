@@ -3,6 +3,7 @@
     <head>
         <title>A-Kimi-Bo Fighter!</title>
         <link rel="icon" type="image/png" href="http://jlevine84.github.io/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,19 +13,25 @@
     <body>
         <header>
             <div class="container-fluid heading">
-                <div class="row">
-                    <div class="col-3"><h2>Jeff Levine Presents</h2></div>
-                    <div class="col-6"><h1>A-Kimi-Bo Fighter!</h1></div>
-                    <div class="col-3"><h2><a href="https://jlevine84.github.io/portfolio.html">Back to Portfolio!</a></h2></div>
+                <div class="row no-gutters">
+                    <div class="col-3 name"><h2>Jeff Levine Presents</h2></div>
+                    <div class="col-6 title"><h1>A-Kimi-Bo Fighter!</h1></div>
+                    <div class="col-3 nav"><h2><a href="https://jlevine84.github.io/portfolio.html">Back to Portfolio!</a></h2></div>
                 </div>    
             </div>
         </header>
+
         <main>
             <div class="container-fluid" id="maindisplay">
+                <div class="container-fluid top">
                     <div class="row no-gutters">
-                        <div class="col-6"><h2 id="char-selector">Choose your character!</h2></div>
-                        <div class="col-6"><h2 id="opp-selector">Choose your opponent!</h2></div> 
-                    </div>   
+                        <div class="col-1"></div>
+                        <div class="col-4 fouroneone" id="char-selector"><h2>Choose your character!</h2></div>
+                        <div class="col-2"></div>
+                        <div class="col-4 fouroneone" id="opp-selector"><h2>Choose your opponent!</h2></div>
+                        <div class="col-1"></div> 
+                    </div>
+                </div>   
                 <div class="container-fluid" id="selector-container">
                     <div class="row no-gutters">
                         <div class="col-1"></div>
@@ -48,7 +55,7 @@
                         <div class="col-2" id="battle">
                             <div class="row no-gutters">
                                 <div class="w-100"></div>
-                                <div class="col-6" id="fight-button"><button type="button" class="btn btn-secondary" id="fight-btn">Fight!</button></div>
+                                <div class="col-6" id="fight-button"><button type="button" class="btn btn-secondary" id="fight-btn">F i g h t !</button></div>
                                 <div class="w-100"></div>
                                 <div class="col-6" id="hero-health">Current Health: <br></div>
                                 <div class="col-6" id="enemy-health">Enemy Health: <br></div>
@@ -63,7 +70,7 @@
                 <div class="container-fluid" id="gameinfo">
                     <div class="row no-gutters">
                         <div class="col-2"></div>
-                        <div class="col-2" id="win-loss"></div>
+                        <div class="col-2 fouroneone" id="win-loss"></div>
                         <div class="col-3"></div>
                         <div class="col-4" id="defeated"></div>
                     </div>
